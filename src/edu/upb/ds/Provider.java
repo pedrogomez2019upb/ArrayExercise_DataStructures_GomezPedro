@@ -1,12 +1,32 @@
 package edu.upb.ds;
-
+//###################################
+//Provider class
+//###################################
+//Welcome to the provider's class!
 public class Provider {
+    //###################################
+    //Attributes
+    //###################################
+    //These are the main attributes to use on the program.
     private String name;
     private String city;
     private long numArticles;
-
+    //###################################
+    //Empty constructor
+    //###################################
     public Provider(){}
 
+    //###################################
+    //Constructor
+    //###################################
+    public Provider(String name, String city, long numArticles) {
+        this.name = name;
+        this.city = city;
+        this.numArticles = numArticles;
+    }
+    //###################################
+    //Getters/Setters
+    //###################################
     public String getName() {
         return name;
     }
@@ -31,9 +51,6 @@ public class Provider {
         this.numArticles = numArticles;
     }
 
-    public Provider(String name, String city, long numArticles) {
-        this.name = name;
-        this.city = city;
-        this.numArticles = numArticles;
-    }
+
 }
+//Developed by Pedro Felipe Gomez / ID:000396221
