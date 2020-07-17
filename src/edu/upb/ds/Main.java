@@ -20,10 +20,26 @@ public class Main {
         System.out.println("\n3:Create Provider");
         System.out.println("\n4:Delete Provider");
         System.out.println("\n5:See All Provider");
-        System.out.println("\n6:Close");
+        System.out.println("\n6:Change Article");
+        System.out.println("\n7:Close");
         option = sc.nextInt();
             if (option == 1) {
-                System.out.println("Option 1");
+                System.out.println("\n############################");
+                System.out.println("\nSee Provider");
+                System.out.println("\n############################");
+                System.out.println("\nPlease provide a name:");
+                String temporalName=sc.next().toString();
+                for(int i=0;i<listProvider.size();i++){
+                    Provider provider1=listProvider.get(i);
+                    if(temporalName.equals(provider1.getName())){
+                        System.out.println("\n############################");
+                        System.out.println("\nProvider info");
+                        System.out.println("\n############################");
+                        System.out.println("\nName:" + provider1.getName());
+                        System.out.println("\nCity:" + provider1.getCity());
+                        System.out.println("\nArticles:" + provider1.getNumArticles());
+                    }
+                }
             } else if (option == 2) {
                 System.out.println("\n############################");
                 System.out.println("\nChange Provider's City");
@@ -86,6 +102,29 @@ public class Main {
                 }
             }
             else if (option==6){
+                System.out.println("\n############################");
+                System.out.println("\nChange Provider's Articles");
+                System.out.println("\n############################");
+                System.out.println("\nPlease provide a name:");
+                sc.nextLine();
+                String temporalName=sc.nextLine();
+                for(int i=0;i<listProvider.size();i++){
+                    Provider provider6=listProvider.get(i);
+                    if(temporalName.equals(provider6.getName())){
+                        System.out.println("\nPlease provide the articles's procedure (Out=-number -- In=+number):");
+                        String procedureArticle= sc.nextLine();
+                        long articlesProvider= (long) provider6.getNumArticles();
+                        long procedureArticleDouble=Long.parseLong(procedureArticle);
+                        long newNumber=procedureArticleDouble+articlesProvider;
+                        provider6.setNumArticles(newNumber);
+                        System.out.println("\nModified Successfully the new article for:");
+                        System.out.println("\nName:" + provider6.getName());
+                        System.out.println("\nCity:" + provider6.getCity());
+                        System.out.println("\nArticles:" + provider6.getNumArticles());
+                    }
+                }
+            }
+            else if(option==7){
                 break;
             }
         }
