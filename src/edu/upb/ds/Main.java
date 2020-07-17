@@ -61,11 +61,18 @@ public class Main {
                 System.out.println("\nArticles:" + a.getNumArticles());
             }
             else if (option==4){
-                Provider a = new Provider();
                 System.out.println("\n############################");
-                System.out.println("\nProvider Creator");
+                System.out.println("\nRemove Provider");
                 System.out.println("\n############################");
                 System.out.println("\nPlease provide a name:");
+                String temporalName=sc.next().toString();
+                for(int i=0;i<listProvider.size();i++){
+                    Provider provider4=listProvider.get(i);
+                    if(temporalName.equals(provider4.getName())){
+                        listProvider.remove(i);
+                        System.out.println("\nDeleted Successfully the old provider!");
+                    }
+                }
             }
             else if (option==5){
                 for(int i=0;i<listProvider.size();i++){
