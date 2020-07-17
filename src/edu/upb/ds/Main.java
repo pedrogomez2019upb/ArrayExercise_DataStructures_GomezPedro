@@ -29,6 +29,7 @@ public class Main {
                 System.out.println("\nChange Provider's City");
                 System.out.println("\n############################");
                 System.out.println("\nPlease provide a name:");
+                sc.nextLine();
                 String temporalName=sc.nextLine();
                 for(int i=0;i<listProvider.size();i++){
                     Prov b=listProvider.get(i);
@@ -48,9 +49,9 @@ public class Main {
                 System.out.println("\nProvider Creator");
                 System.out.println("\n############################");
                 System.out.println("\nPlease provide a name:");
-                a.setName(sc.nextLine());
+                a.setName(sc.next().toString());
                 System.out.println("\nPlease provide the city where is located:");
-                a.setCity(sc.nextLine());
+                a.setCity(sc.next().toString());
                 System.out.println("\nPlease provide the number of articles:");
                 a.setNumArticles(sc.nextLong());
                 listProvider.add(a);
