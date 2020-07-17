@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int option=0;
-        while(option!=5) {
+        boolean programExit=false;
+        while(!programExit) {
         ArrayList<Provider> listProvider= new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("\n############################");
@@ -18,9 +18,9 @@ public class Main {
         System.out.println("\n2:Change city name");
         System.out.println("\n3:Create Provider");
         System.out.println("\n4:Delete Provider");
-        System.out.println("\n5:Close");
-        option = Integer.parseInt(sc.nextLine());
-
+        System.out.println("\n5:See All Provider");
+        System.out.println("\n6:Close");
+        int option = Integer.parseInt(sc.nextLine());
             if (option == 1) {
                 System.out.println("Option 1");
             } else if (option == 2) {
@@ -58,10 +58,24 @@ public class Main {
                 System.out.println("\nCity:" + a.getCity());
                 System.out.println("\nArticles:" + a.getNumArticles());
             }
+            else if (option==4){
+                System.out.println("Option 4");
+            }
+            else if (option==5){
+                for(int i=0;i<listProvider.size();i++){
+                    System.out.println("\nProvider number : "+(i+1));
+                    Provider provider5=listProvider.get(i);
+                    System.out.println("\nName: "+provider5.getName());
+                    System.out.println("\nCity: "+provider5.getCity());
+                    System.out.println("\nArticles: "+provider5.getNumArticles());
+                }
+            }
+            else if (option==6){
+                break;
+            }
         }
         System.out.println("\n############################");
         System.out.println("\nThanks for using the Provider Panel Control");
         System.out.println("\n############################");
     }
-
 }
