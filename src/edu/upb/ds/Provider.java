@@ -3,7 +3,7 @@ package edu.upb.ds;
 public class Provider {
     private String name;
     private String city;
-    private double numArticles;
+    private long numArticles;
 
     public Provider(){}
 
@@ -27,11 +27,11 @@ public class Provider {
         return numArticles;
     }
 
-    public void setNumArticles(double numArticles) {
+    public void setNumArticles(long numArticles) {
         this.numArticles = numArticles;
     }
 
-    public Provider(String name, String city, double numArticles) {
+    public Provider(String name, String city, long numArticles) {
         this.name = name;
         this.city = city;
         this.numArticles = numArticles;
