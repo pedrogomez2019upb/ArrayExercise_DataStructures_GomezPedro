@@ -1,11 +1,11 @@
 package edu.upb.ds;
 
-public class Prov {
+public class Provider {
     private String name;
     private String city;
     private long numArticles;
 
-    public Prov(){}
+    public Provider(){}
 
     public String getName() {
         return name;
@@ -31,7 +31,7 @@ public class Prov {
         this.numArticles = numArticles;
     }
 
-    public Prov(String name, String city, long numArticles) {
+    public Provider(String name, String city, long numArticles) {
         this.name = name;
         this.city = city;
         this.numArticles = numArticles;

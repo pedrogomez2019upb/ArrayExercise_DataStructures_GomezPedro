@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean programExit=false;
-        ArrayList<Prov> listProvider= new ArrayList<>();
+        ArrayList<Provider> listProvider= new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         while(!programExit) {
             int option=0;
@@ -32,7 +32,7 @@ public class Main {
                 sc.nextLine();
                 String temporalName=sc.nextLine();
                 for(int i=0;i<listProvider.size();i++){
-                    Prov b=listProvider.get(i);
+                    Provider b=listProvider.get(i);
                     if(temporalName.equals(b.getName())){
                         System.out.println("\nPlease provide a new city:");
                         String temporalCity= sc.nextLine();
@@ -44,7 +44,7 @@ public class Main {
                     }
                 }
             } else if (option == 3) {
-                Prov a = new Prov();
+                Provider a = new Provider();
                 System.out.println("\n############################");
                 System.out.println("\nProvider Creator");
                 System.out.println("\n############################");
@@ -61,12 +61,18 @@ public class Main {
                 System.out.println("\nArticles:" + a.getNumArticles());
             }
             else if (option==4){
-                System.out.println("Option 4");
+                Provider a = new Provider();
+                System.out.println("\n############################");
+                System.out.println("\nProvider Creator");
+                System.out.println("\n############################");
+                System.out.println("\nPlease provide a name:");
             }
             else if (option==5){
                 for(int i=0;i<listProvider.size();i++){
+                    System.out.println("\n############################");
                     System.out.println("\nProvider number : "+(i+1));
-                    Prov provider5=listProvider.get(i);
+                    System.out.println("\n############################");
+                    Provider provider5=listProvider.get(i);
                     System.out.println("\nName: "+provider5.getName());
                     System.out.println("\nCity: "+provider5.getCity());
                     System.out.println("\nArticles: "+provider5.getNumArticles());
